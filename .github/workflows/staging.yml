@@ -33,6 +33,6 @@ jobs:
         uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a
         with:
           context: .
-          file: ./docker/Dockerfile
+          file: ./Dockerfile
           push: true
           tags: ${{ vars.DOCHUB_USERNAME }}/var_keeper:${{ steps.cut.outputs.sha_short }}
