@@ -13,7 +13,8 @@ jobs:
       - name: Cut commit sha
         id: cut
         run: echo "sha_short=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
-        
+      - name: Check info
+        run: docker info  
       # Login against a Docker registry
       # https://github.com/docker/login-action
       - name: Log into DockerHUB
